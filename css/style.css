@@ -150,6 +150,14 @@ p {
 }
 
 .reviewBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    height: 75px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     white-space: nowrap;
     background-color: white;
     padding: 15px 20px;
@@ -159,6 +167,7 @@ p {
     flex: 0 0 auto;
     gap: 20px;
     box-shadow: 2px 2px 4px black;
+    text-align: center;
 }
 
 @keyframes slideLeft {
