@@ -7,20 +7,101 @@
     <!-- CSS Stylesheet-->
     <link rel="stylesheet" href="css/style.css">
 
-    <!--JavaScript-->
-    <script src="js/main.js"></script>
-
     <!--Imported Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Pacifico&display=swap" rel="stylesheet">
+
+    
+    <style>
+        #comment-form-section {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #f4f4f4;
+        }
+
+        #comment-form-section h2 {
+            font-family: 'Pacifico', cursive;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        #reviewForm {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+       
+        .star-rating-form {
+            margin-bottom: 1rem;
+        }
+        .star-rating-form .star {
+            font-size: 2.5rem; 
+            color: #ccc; 
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+     
+        .star-rating-form .star.hovered {
+            color: #fdd835; 
+        }
+       
+        .star-rating-form .star.selected {
+            color: #fbc02d;
+        }
+
+        #commentText {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-family: 'Libertinus Mono', monospace;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        #reviewForm button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #5a8d5a;
+            color: white;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #reviewForm button:hover {
+            background-color: #4a7d4a;
+        }
+        
+        #thankYouMessage {
+            margin-top: 1rem;
+            color: #2a662a;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+      
+        .review-stars {
+            color: #fbc02d; 
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .review-comment {
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
     <header>
         <!--Navigation Bar-->
         <nav class="navBar">
             <h1 id="title">Laika Brewery</h1>
-
             <div class="navLinks">
                 <a class="navItem" id="homeLink" href="index.html">Home</a>
                 <a class="navItem" id="menuLink" href="menu.html">Menu</a>
@@ -38,33 +119,23 @@
             <div class="overlayTagline">Welcome to Laika</div>
         </section>
 
+    
         <section id="reviews" class="section">
             <p>Discover the finest craft beers brewed with passion and green inspiration.<br>Join us for a refreshing experience!</p>
             <div class="reviewStream">
+            
                 <div class="reviewBox">🍺 “Awesome atmosphere”</div>
                 <div class="reviewBox">🥸 “Loved the trivia night!”</div>
                 <div class="reviewBox">☺️ "Friendly staff"</div>
                 <div class="reviewBox">⭐⭐⭐⭐⭐ "Great drinks!"</div>
                 <div class="reviewBox">⭐⭐⭐⭐⭐ "Food is to die for!"</div>
                 <div class="reviewBox">🎶 "Good music & vibes"</div>
-                <div class="reviewBox">🍺 “Awesome atmosphere”</div>
-                <div class="reviewBox">🥸 “Loved the trivia night!”</div>
-                <div class="reviewBox">☺️ "Friendly staff"</div>
-                <div class="reviewBox">⭐⭐⭐⭐⭐ "Great drinks!"</div>
-                <div class="reviewBox">⭐⭐⭐⭐⭐ "Food is to die for!"</div>
-                <div class="reviewBox">🎶 "Good music & vibes"</div>
-                <div class="reviewBox">🍺 “Awesome atmosphere”</div>
             </div>
         </section>
 
         <section id="about" class="section">
             <h2>About Us</h2>
-            <p>Nestled in the heart of Brewtown, we're a craft brewery <br>
-                with big love for bold flavors and community.<br>
-                Founded by like-minded peers, Laika is a space<br>
-                for good vibes, local shows, and geniune connection.<br>
-                Whether you're here for a trivia night, a bite, or just to unwind,<br>
-                you're always welcome at Laika.</p>
+            <p>Nestled in the heart of Brewtown... you're always welcome at Laika.</p>
         </section>
 
         <section id="beer" class="section">
@@ -83,10 +154,115 @@
             <p>Phone: (555) 123-4567</p>
             <button class="btn">Visit Us</button>
         </section>
+
+       
+        <section id="comment-form-section" class="section">
+            <h2>Leave a Review!</h2>
+            <p>Let us know what you think. Your feedback helps us grow.</p>
+            <form id="reviewForm">
+                
+                <div class="star-rating-form">
+                    <span class="star" data-value="1">★</span><span class="star" data-value="2">★</span><span class="star" data-value="3">★</span><span class="star" data-value="4">★</span><span class="star" data-value="5">★</span>
+                </div>
+                <textarea id="commentText" name="comment" placeholder="Write your review here..." required></textarea>
+                <button type="submit">Submit Review</button>
+            </form>
+            <p id="thankYouMessage"></p>
+        </section>
+
     </main>
 
     <footer>
-        &copy; 2024 Laika Brewery. All rights reserved.
+        © 2024 Laika Brewery. All rights reserved.
     </footer>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const reviewForm = document.getElementById('reviewForm');
+            const commentText = document.getElementById('commentText');
+            const reviewStream = document.querySelector('.reviewStream');
+            const thankYouMessage = document.getElementById('thankYouMessage');
+            
+            
+            const stars = document.querySelectorAll('.star-rating-form .star');
+            let currentRating = 0; 
+
+        
+
+          
+            stars.forEach(star => {
+                star.addEventListener('mouseover', function () {
+                    const hoverValue = this.dataset.value;
+                    stars.forEach(s => {
+                        s.classList.toggle('hovered', s.dataset.value <= hoverValue);
+                    });
+                });
+
+                star.addEventListener('mouseout', function () {
+                    stars.forEach(s => s.classList.remove('hovered'));
+                });
+
+               
+                star.addEventListener('click', function () {
+                    currentRating = this.dataset.value;
+                    stars.forEach(s => {
+                        s.classList.toggle('selected', s.dataset.value <= currentRating);
+                    });
+                });
+            });
+
+         
+            reviewForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const userComment = commentText.value.trim();
+
+                
+                if (currentRating === 0) {
+                    alert('Please select a star rating!');
+                    return;
+                }
+                if (userComment === '') {
+                    alert('Please write a review before submitting!');
+                    return;
+                }
+
+               
+                const newReviewBox = document.createElement('div');
+                newReviewBox.classList.add('reviewBox');
+
+                
+                const starsDisplay = document.createElement('div');
+                starsDisplay.classList.add('review-stars');
+                for (let i = 1; i <= 5; i++) {
+                    starsDisplay.innerHTML += (i <= currentRating) ? '★' : '☆';
+                }
+                
+                
+                const commentDisplay = document.createElement('p');
+                commentDisplay.classList.add('review-comment');
+                commentDisplay.textContent = `"${userComment}"`;
+
+               
+                newReviewBox.appendChild(starsDisplay);
+                newReviewBox.appendChild(commentDisplay);
+
+                
+                reviewStream.prepend(newReviewBox);
+
+               
+                thankYouMessage.textContent = 'Thanks for the review!';
+                commentText.value = '';
+                currentRating = 0;
+                stars.forEach(s => s.classList.remove('selected'));
+
+               
+                setTimeout(() => {
+                    thankYouMessage.textContent = '';
+                }, 4000);
+            });
+        });
+    </script>
 </body>
 </html>
