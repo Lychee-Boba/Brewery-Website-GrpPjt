@@ -170,6 +170,89 @@ p {
     }
 }
 
+/* review form home page */
+#comment-form-section {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f4f4f4;
+}
+
+#comment-form-section h2 {
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+#reviewForm {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+        
+       
+.star-rating-form {
+    margin-bottom: 1rem;
+}
+
+.star-rating-form .star {
+    font-size: 2.5rem; 
+    color: #ccc; 
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star-rating-form .star.hovered {
+    color: #fdd835; 
+}
+       
+.star-rating-form .star.selected {
+    color: #fbc02d;
+}
+
+#commentText {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Libertinus Mono', monospace;
+    font-size: 1rem;
+    margin-bottom: 1rem;}
+
+#reviewForm button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #5a8d5a;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reviewForm button:hover {
+    background-color: #4a7d4a;
+}
+        
+#thankYouMessage {
+    margin-top: 1rem;
+    color: #2a662a;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+      
+.review-stars {
+    color: #fbc02d; 
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.review-comment {
+    font-style: italic;
+}
+
 footer {
     background-color: #4CAF50;
     color: white;
