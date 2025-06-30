@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: scroll;
+}
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #b7c4b1; /* soft green background #a8d5ba*/
+    background-image: linear-gradient(135deg, #b7c4b1 25%, transparent 25%), 
+                    linear-gradient(225deg, #b7c4b1 25%, transparent 25%),
+                    linear-gradient(45deg, #b7c4b1 25%, transparent 25%), 
+                    linear-gradient(135deg, #b7c4b1 25%, transparent 25%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0;
+}
+
+header {
+    background-color: #31331f;
+}
+
+#title {
+    font-family: "Pacifico", cursive;
+    font-size: 35px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+}
+
+.navBar {
+    background-color: #31331f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    padding: 20px 40px;
+    /* makes navbar move with scroll */
+    position: fixed;
+    z-index: 1000;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: nowrap;
+}
+.navItem {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 5px 10px;
+    padding-top: 10px;
+}
+
+.navItem:hover {
+    text-decoration: underline;
+}
+
+#cartPic {
+    display: block;
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #645d3b;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out,
+                background-color 0.2s ease-in-out,
+                box-shadow 0.2s ease-in-out;
+}
+
+#cartPic:hover {
+    transform: scale(1.1);
+    background-color: #706945;
+    box-shadow: 0 0 5px 1px #aea886;
+}
+
+main {
+    margin-top: 80px;
+}
+
+/* banner section */
+
+#banner {
+    background-color: #31331f;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 4;
+    overflow: hidden;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.bgImage {
+    background-color: #31331f;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    opacity: 0.75;
+}
+
+.overlayTagline {
+    font-family: "Libertinus Mono", monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    /* makes font size more responsive to viewport */
+    font-size: clamp(24px, 6vw, 50px);
+    text-align: center;
+    text-shadow: 5px 5px 5px black;
+    padding: 0 10px;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+/*review stream on home page*/
+p {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color:#31331f;
+
+}
+
+.reviews {
+    overflow: hidden;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.reviewStream {
+    padding-top: 30px;
+    display: flex;
+    width: max-content;
+    animation: slideLeft 33s linear infinite;
+}
+
+.reviewBox {
+    white-space: nowrap;
+    background-color: white;
+    padding: 15px 20px;
+    margin-right: 40px;
+    font-size: 13px;
+    border-radius: 7px;
+    flex: 0 0 auto;
+    gap: 20px;
+    box-shadow: 2px 2px 4px black;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0%)
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Placeholder styles for sections */
+.section {
+    margin-bottom: 40px;
+}
+
+/* Example button style */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
