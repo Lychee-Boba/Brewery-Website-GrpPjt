@@ -11,6 +11,11 @@ header {
    text-align: center;
 }
 
+h1 {
+   color: darkblue;
+   font-size: 24pt;
+}
+
 .main-header img {
   max-height: 144px;           /* resize logo if needed */
   width: auto;                /* preserve aspect ratio */
