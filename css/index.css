@@ -5,7 +5,7 @@ body {
 }
 
 header {
-   background-color: red;
+   background-color: #fcc9b5;
    color: white;
    padding: 20px;
    text-align: center;
@@ -48,7 +48,7 @@ header {
 }
 
 footer {
-   background-color: red;
+   background-color: #fcc9b5;
    color: white;
    height: 80px; 
    padding: 10px;
