@@ -5,7 +5,7 @@
     <title>Laika Brewery</title>
 
     <!-- CSS Stylesheet-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
 
     <!--JavaScript-->
     <script src="js/cart.js"></script>
@@ -37,6 +37,36 @@
             <img src="images/cartBanner.jpg" alt="Brewery" class="bgImage"/>
             <div class="overlayTagline">Cart</div>
         </section>
+
+        <section class="table-section">
+        <table id="cart-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+
+          <tbody></tbody>
+        </table>
+        <div class="special-instructions">
+          <label for="instructions"
+            ><strong>Special instructions</strong></label
+          >
+          <textarea
+            id="instructions"
+            rows="3"
+            placeholder="Add special instructions..."
+          ></textarea>
+        </div>
+        <div class="cart-summary">
+          <span id="cart-total"></span>
+          <span class="note">Taxes and shipping not included</span>
+          <button id="checkout-btn">CHECKOUT</button>
+        </div>
+      </section>
     </main>
 
     <footer>
