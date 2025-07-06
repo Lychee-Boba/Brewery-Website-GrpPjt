@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+}
+body {
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #b7c4b1; /* soft green background #a8d5ba*/
+  background-image: linear-gradient(135deg, #b7c4b1 25%, transparent 25%),
+    linear-gradient(225deg, #b7c4b1 25%, transparent 25%),
+    linear-gradient(45deg, #b7c4b1 25%, transparent 25%),
+    linear-gradient(135deg, #b7c4b1 25%, transparent 25%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0;
+}
+
+header {
+  background-color: #31331f;
+}
+
+#title {
+  font-family: "Pacifico", cursive;
+  font-size: 35px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  color: white;
+  line-height: 1;
+}
+
+.navBar {
+  background-color: #31331f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  padding: 20px 40px;
+  /* makes navbar move with scroll */
+  position: fixed;
+  z-index: 1000;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: nowrap;
+}
+.navItem {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 5px 10px;
+  padding-top: 10px;
+}
+
+.navItem:hover {
+  text-decoration: underline;
+}
+
+#cartPic {
+  display: block;
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #645d3b;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+#cartPic:hover {
+  transform: scale(1.1);
+  background-color: #706945;
+  box-shadow: 0 0 5px 1px #aea886;
+}
+
+main {
+  margin-top: 80px;
+}
+
+/* banner section */
+#banner {
+  background-color: #31331f;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 4;
+  overflow: hidden;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.bgImage {
+  background-color: #31331f;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  opacity: 0.75;
+}
+
+.overlayTagline {
+  font-family: "Libertinus Mono", monospace;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  /* makes font size more responsive to viewport */
+  font-size: clamp(24px, 6vw, 50px);
+  text-align: center;
+  text-shadow: 5px 5px 5px black;
+  padding: 0 10px;
+  max-width: 90%;
+  box-sizing: border-box;
+}
+
+
+footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Placeholder styles for sections */
+.section {
+  margin-bottom: 40px;
+}
+
+
+/*Cart Styling*/
+
+.table-section {
+  
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px;
+
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+th, td {
+  padding: 16px 8px;
+  text-align: left;
+}
+
+th {
+  color: #000;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.special-instructions {
+  margin-bottom: 24px;
+}
+
+.special-instructions textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.cart-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-top: 16px;
+}
+
+#cart-total {
+  font-weight: bold;
+  color: #1a2341;
+  font-size: 22px;
+}
+
+.note {
+  color: #888;
+  font-size: 14px;
+  margin-left: 16px;
+}
+
+#checkout-btn {
+  background: #e07a5f;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 24px;
+  transition: background 0.2s;
+}
+
+#checkout-btn:hover {
+  background: #d65a31;
+}
+
