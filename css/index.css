@@ -1,7 +1,7 @@
 body {
    font-family: Arial, sans-serif;
-   background-color: black;
-   color: white;
+   background-color: #fcc9b5;
+   color: black;
 }
 
 header {
@@ -49,14 +49,14 @@ header {
 
 footer {
    background-color: #fcc9b5;
-   color: white;
+   color: black;
    height: 80px; 
    padding: 10px;
    text-align: center;
 }
 
 #grid-container { 
-   background: darkslategray;
+   background: #b5d9fc;
    display: grid;
    grid-template-columns: 33% 34% 33%;
 }
