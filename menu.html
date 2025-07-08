@@ -5,7 +5,7 @@
     <title>Laika Brewery</title>
 
     <!-- CSS Stylesheet-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
 
     <!--JavaScript-->
     <script src="js/menu.js"></script>
@@ -30,13 +30,424 @@
                 </a>
             </div>
         </nav>
-    </header>
-    <main>
+
+        <!-- top banner -->
         <section id="banner" class="section">
             <img src="images/menuBanner.jpg" alt="Brewery" class="bgImage"/>
             <div class="overlayTagline">Menu</div>
         </section>
-    </main>
+    </header>
+
+    <div class="wrapper">
+    <!-- left menu navigation bar-->
+        <section id="menuNav" class="sideNav">
+            <div class="menuNavBtn">
+                <!-- # used to anchor with same page, each section in main-->
+                <a href="#appetizer" class="menuBtn">Appetizer</a>
+                <a href="#main" class="menuBtn">Main Course</a>
+                <a href="#dessert" class="menuBtn">Dessert</a>
+                <a href="#onTap" class="menuBtn">On Tap</a>
+                <a href="#flights" class="menuBtn">Flights</a>
+                <a href="#seasonal" class="menuBtn">Seasonals</a>
+                <a href="#nonAlcoholic" class="menuBtn">Non-Alcoholic</a>
+            </div>
+        </section>
+
+        <main>
+            <!-- foods will appear in a card-style in a grid for each section-->
+            <section id="appetizer" class="menuSection">
+                <h2>Appetizer</h2>
+                <div class="foodGrid">
+                    <!--data name & price attributes for local storage-->
+                    <div class="foodCard" data-name="Nachos" data-price="9.99">
+                        <!--Food Cards-->
+                        <img src="images/menu/appetizerNachos.jpg" alt="Nachos">
+                        <div class="foodInfo">
+                            <h3>Nachos</h3>
+                            <p class="price">$9.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Wings (6ct)" data-price="7.99">
+                        <img src="images/menu/appetizerWings.jpg" alt="Wings">
+                        <div class="foodInfo">
+                            <h3>Wings (6ct)</h3>
+                            <p class="price">$7.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Cheese Breadsticks" data-price="6.99">
+                        <img src="images/menu/appetizerBreadsticks.jpg" alt="Breadsticks">
+                        <div class="foodInfo">
+                            <h3>Cheese Breadsticks (8ct)</h3>
+                            <p class="price">$6.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Charcuterie Board" data-price="16.99">
+                        <img src="images/menu/appetizerCharcuterie.jpg" alt="Charcuterie">
+                        <div class="foodInfo">
+                            <h3>Charcuterie Board</h3>
+                            <p class="price">$16.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Hummus & Pita Chips" data-price="5.99">
+                        <img src="images/menu/appetizerHummus.jpg" alt="Hummus and Pita Chips">
+                        <div class="foodInfo">
+                            <h3>Hummus & Pita Chips</h3>
+                            <p class="price">$5.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Onion Rings" data-price="5.99">
+                        <img src="images/menu/appetizerOnionRings.jpg" alt="Onion Rings">
+                        <div class="foodInfo">
+                            <h3>Onion Rings</h3>
+                            <p class="price">$5.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="main" class="menuSection">
+                <h2>Main</h2>
+                <div class="foodGrid">
+                    <div class="foodCard" data-name="Grilled Chicken Wrap" data-price="9.99">
+                        <img src="images/menu/mainChickenWrap.jpg" alt="Chicken Wrap">
+                        <div class="foodInfo">
+                            <h3>Grilled Chicken Wrap</h3>
+                            <p class="price">$9.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Beer-Battered Fish & Chips" data-price="12.99">
+                        <img src="images/menu/mainFishChips.jpg" alt="Fish & Chips">
+                        <div class="foodInfo">
+                            <h3>Beer-Battered Fish & Chips</h3>
+                            <p class="price">$12.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Flatbread Pizza" data-price="10.99">
+                        <img src="images/menu/mainPizza.jpg" alt="Pizza">
+                        <div class="foodInfo">
+                            <h3>Flatbread Pizza</h3>
+                            <p class="price">$10.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Street Tacos" data-price="10.99">
+                        <img src="images/menu/mainTacos.jpg" alt="Tacos">
+                        <div class="foodInfo">
+                            <h3>Street Tacos</h3>
+                            <p class="price">$10.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Chicken Alfredo Pasta" data-price="12.99">
+                        <img src="images/menu/mainPasta.jpg" alt="Alfredo Pasta">
+                        <div class="foodInfo">
+                            <h3>Chicken Alfredo Pasta</h3>
+                            <p class="price">$12.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+                    
+                    <div class="foodCard" data-name="Classic Burger & Fries" data-price="10.99">
+                        <img src="images/menu/mainBurger.jpg" alt="Burger & Fries">
+                        <div class="foodInfo">
+                            <h3>Classic Burger & Fries</h3>
+                            <p class="price">$10.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Smoked Sausage Platter" data-price="13.99">
+                        <img src="images/menu/mainSmokedSausage.jpg" alt="Smoked Sausage">
+                        <div class="foodInfo">
+                            <h3>Smoked Sausage Platter</h3>
+                            <p class="price">$13.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Steak & Sauteed Mushrooms" data-price="19.99">
+                        <img src="images/menu/mainSteak.jpg" alt="Steak">
+                        <div class="foodInfo">
+                            <h3>Steak & Sauteed Mushrooms</h3>
+                            <p class="price">$19.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="dessert" class="menuSection">
+                <h2>Dessert</h2>
+                <div class="foodGrid">
+                    <div class="foodCard" data-name="Apple Crisp Skillet" data-price="9.99">
+                        <img src="images/menu/dessertApple.jpg" alt="Apple Crisp">
+                        <div class="foodInfo">
+                            <h3>Apple Crisp Skillet</h3>
+                            <p class="price">$9.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Root Beer Float" data-price="5.99">
+                        <img src="images/menu/dessertFloat.jpg" alt="Beer Float">
+                        <div class="foodInfo">
+                            <h3>Root Beer Float</h3>
+                            <p class="price">$5.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Cheesecake" data-price="6.99">
+                        <img src="images/menu/dessertCheesecake.jpg" alt="Cheesecake">
+                        <div class="foodInfo">
+                            <h3>Cheesecake</h3>
+                            <p class="price">$6.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Double Chocolate Brownies" data-price="9.99">
+                        <img src="images/menu/dessertBrownies.jpg" alt="Brownies">
+                        <div class="foodInfo">
+                            <h3>Double Chocolate Brownies</h3>
+                            <p class="price">$9.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="onTap" class="menuSection">
+                <h2>On Tap</h2>
+                <p>All drink prices are based on a standard pint (16oz).</p>
+                <div class="foodGrid">
+                    <div class="foodCard" data-name="Velvet Stout" data-price="7.00">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>Velvet Stout</h3>
+                            <p class="description">
+                                Creamy, Chocolate, Roasted Coffee; Milk Stout<br>
+                                ABV: 6.2%
+                            </p>
+                            <p class="price">$7.00</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Berry Bramble Sour" data-price="6.50">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>Berry Bramble Sour</h3>
+                            <p class="description">
+                                Tart, Raspberry & Blackberry, Refreshing; Fruited Kettle Sour<br>
+                                ABV: 4.9%
+                            </p>
+                            <p class="price">$6.50</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Harvest Amber" data-price="6.50">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>Harvest Amber</h3>
+                            <p class="description">
+                                Toasted Caramel, Smooth Finish; Amber Ale<br>
+                                ABV: 5.4%
+                            </p>
+                            <p class="price">$6.50</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Citrus Grove IPA" data-price="7.00">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>Citrus Grove IPA</h3>
+                            <p class="description">
+                                Bright, Grapefruit, Pine; West Coast IPA<br>
+                                ABV: 6.5%
+                            </p>
+                            <p class="price">$7.00</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Driftwood Saison" data-price="7.00">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>Driftwood Saison</h3>
+                            <p class="description">
+                                Peppery, Citrusy, Dry; Belgian Saison<br>
+                                ABV: 6.8%
+                            </p>
+                            <p class="price">$7.00</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Golden Mill Lager" data-price="6.00">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>Golden Mill Lager</h3>
+                            <p class="description">
+                                Crisp, Clean, Lightly Malty; American Lager<br>
+                                ABV: 4.8%
+                            </p>
+                            <p class="price">$6.00</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="flights" class="menuSection">
+                <h2>Flights</h2>
+                <div class="foodGrid">
+                    <div class="foodCard" data-name="Custom Beer Flight" data-price="10.00">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>Custom Beer Flight</h3>
+                            <p class="description">
+                                Choose Any Four Beers From On Tap<br>
+                            </p>
+                            <p class="price">$10.00</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Seasonal Flight" data-price="11.00">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>Seasonal Flight</h3>
+                            <p class="description">
+                                4 Rotating Seasonal or Limited-Release Beers<br>
+                            </p>
+                            <p class="price">$11.00</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="seasonal" class="menuSection">
+                <h2>Seasonal</h2>
+                <div class="foodGrid">
+                    <div class="foodCard" data-name="Autumn Maple Ale" data-price="7.00">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>Autumn Maple Ale</h3>
+                            <p class="description">
+                                Maple, Cinnamon, Nutmeg, Smooth Malt; Spiced Ale<br>
+                                ABV: 6.0%
+                            </p>
+                            <p class="price">$7.00</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Winter Ember Bock" data-price="7.50">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>Winter Ember Bock</h3>
+                            <p class="description">
+                                Rich Malt, Toffee, Warming Finish; Doppelbock<br>
+                                ABV: 7.2%
+                            </p>
+                            <p class="price">$7.50</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Spring Citrus Saison" data-price="7.00">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>Spring Citrus Saison</h3>
+                            <p class="description">
+                                Zesty, Lemon, Floral, Dry; Saison<br>
+                                ABV: 6.3%
+                            </p>
+                            <p class="price">$7.00</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Wheat Ale Blend" data-price="6.50">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>Wheat Ale Blend</h3>
+                            <p class="description">
+                                Lemonade-infused, Light, Refreshing; Wheat Ale Blend<br>
+                                ABV: 4.5%
+                            </p>
+                            <p class="price">$6.50</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="nonAlcoholic" class="menuSection">
+                <h2>Non-Alcoholic</h2>
+                <div class="foodGrid">
+                    <div class="foodCard" data-name="House-Made Lemonade" data-price="5.99">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>House-Made Lemonade</h3>
+                            <p class="price">$5.99</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Ginger Citrus Fizz" data-price="3.50">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>Ginger Citrus Fizz</h3>
+                            <p class="price">$3.50</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Cold Brew Coffee" data-price="4.50">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>Cold Brew Coffee</h3>
+                            <p class="price">$4.50</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+
+                    <div class="foodCard" data-name="Sparkling Water" data-price="2.50">
+                        <img src="" alt="">
+                        <div class="foodInfo">
+                            <h3>Sparkling Water</h3>
+                            <p class="price">$2.50</p>
+                            <button class="addCart"> + </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
     <footer>
 
     </footer>
