@@ -130,8 +130,8 @@ main {
 
 /*review stream on home page*/
 p {
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    text-align: left;
     color:#31331f;
 
 }
@@ -178,6 +178,26 @@ p {
         transform: translateX(-50%);
     }
 }
+
+
+#grid-container { 
+   background: #b7c4b1;
+   display: grid;
+   grid-template-columns: 33% 34% 33%;
+}
+
+.grid-container > h2 {
+   font-family: Arial, sans-serif;
+   font-size: 14pt;
+   text-align: center;
+}
+
+.grid-container > p {
+   font-family: Arial, sans-serif;
+   font-size: 14pt;
+   text-align: left;
+}
+
 
 /* review form home page */
 #comment-form-section {
