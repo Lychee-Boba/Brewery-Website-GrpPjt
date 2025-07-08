@@ -20,6 +20,11 @@ body {
     background-position: 0 0, 0 20px, 20px -20px, -20px 0;
 }
 
+/* hide scrollbar */
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
 header {
     background-color: #31331f;
 }
