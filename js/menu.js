@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const addToCartButtons = document.querySelectorAll('.addCart');
     
     const notification = document.createElement("div");
     notification.className = "cart-notification";
@@ -8,24 +7,39 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(notification);
     
     
-    // Add to cart button
-    for (let i = 0; i < addToCartButtons.length; i++) {
-        addToCartButtons[i].addEventListener('click', function() {
-            const foodCard = this.closest('.foodCard');
-            const itemName = foodCard.dataset.name;
-            const itemPrice = parseFloat(foodCard.dataset.price);
-            
-            // Add item to cart
+    //Get all the food items
+    const foodCards = document.querySelectorAll('.foodCard');
+    
+    //Getting data from foodcards
+    for (let i = 0; i < foodCards.length; i++) {
+        const card = foodCards[i];
+        
+        const nameElement = card.querySelector('h3');
+        const priceElement = card.querySelector('.price');
+        const addButton = card.querySelector('.addCart');
+        
+        //Assign ids
+        nameElement.id = `food-name-${i}`;
+        priceElement.id = `food-price-${i}`;
+        addButton.id = `add-btn-${i}`;
+        
+        //Add to cart button
+        addButton.addEventListener('click', function() {
+            const itemName = document.getElementById(`food-name-${i}`).textContent;
+            const itemPrice = parseFloat(
+                document.getElementById(`food-price-${i}`).textContent.replace('$', '')
+            );
             addItemToCart(itemName, itemPrice);
             
             // Show notification
-            notification.style.display = 'block';
+            notification.style.display = 'block'    ;
             setTimeout(function() {
                 notification.style.display = 'none';
             }, 2000);
         });
     }
     
+    //Function executed by add to cart button
     function addItemToCart(name, price) {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         let existingItemIndex = -1;
