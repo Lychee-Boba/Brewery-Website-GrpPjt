@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const images = ["images/beerImage1.jpg", "images/beerImage2.jpg", "images/beerImage3.jpg", "images/beerImage4.jpg", "images/beerImage5.jpg", "images/beerImage6.jpg", "images/beerImage7.jpg", "images/beerImage8.jpg"];
+    let currentIndex = 0;
+
+    setInterval(() => {
+    // Fade out
+    rotator.classList.add("fade-out");
+
+    //Wait for fade out to finish, then change image and fade back in
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            rotator.src = images[currentIndex];
+            rotator.classList.remove("fade-out");
+        }, 1000);
+    }, 4000);
+
+    const rotator = document.getElementById("rotator");
     const reviewForm = document.getElementById('reviewForm');
     const commentText = document.getElementById('commentText');
     const reviewStream = document.querySelector('.reviewStream');
@@ -69,4 +85,5 @@ document.addEventListener('DOMContentLoaded', function () {
             thankYouMessage.textContent = '';
         }, 4000);
     });
-});
+
+});    
