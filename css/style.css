@@ -209,13 +209,13 @@ p {
    overflow-wrap: break-word;
 }
 
-.grid-container h2 {
+.grid-container > h2 {
    font-family: Arial, sans-serif;
    font-size: 14pt;
    text-align: center;
 }
 
-.grid-container p {
+.grid-container > p {
    font-family: Arial, sans-serif;
    font-size: 14pt;
    text-align: left;
