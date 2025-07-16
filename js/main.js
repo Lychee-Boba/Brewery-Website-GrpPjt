@@ -1,25 +1,30 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const rotator = document.getElementById("rotator");
+    const caption = document.getElementById("caption");
+    const reviewForm = document.getElementById('reviewForm');
+    const commentText = document.getElementById('commentText');
+    const reviewStream = document.querySelector('.reviewStream');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+    
+    //This code section is for the rotating beer images and captions
     const images = ["images/beerImage1.jpg", "images/beerImage2.jpg", "images/beerImage3.jpg", "images/beerImage4.jpg", "images/beerImage5.jpg", "images/beerImage6.jpg", "images/beerImage7.jpg", "images/beerImage8.jpg"];
+    const captions = ["Try a flight today!", "Cherry Sour", "First Crush IPA", "NoFo IPA", "G7 Pilsner", "G7B Hazy IPA", "Out of Order Sour", "G7 Golden Ale"]
     let currentIndex = 0;
 
     setInterval(() => {
     // Fade out
-    rotator.classList.add("fade-out");
+        rotator.classList.add("fade-out");
+        caption.classList.add("fade-out");
 
     //Wait for fade out to finish, then change image and fade back in
         setTimeout(() => {
             currentIndex = (currentIndex + 1) % images.length;
             rotator.src = images[currentIndex];
+            caption.textContent = captions[currentIndex];
             rotator.classList.remove("fade-out");
+            caption.classList.remove("fade-out");
         }, 1000);
-    }, 4000);
-
-    const rotator = document.getElementById("rotator");
-    const reviewForm = document.getElementById('reviewForm');
-    const commentText = document.getElementById('commentText');
-    const reviewStream = document.querySelector('.reviewStream');
-    const thankYouMessage = document.getElementById('thankYouMessage');
-            
+    }, 4000);      
             
     const stars = document.querySelectorAll('.star-rating-form .star');
     let currentRating = 0; 
