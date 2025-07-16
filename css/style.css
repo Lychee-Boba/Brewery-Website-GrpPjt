@@ -233,10 +233,10 @@ table {
     margin-right: auto;
 }
 
-/* Left-justify the content within table cells */
 table th,
 table td {
-    text-align: left;
+    text-align: left;  /* Left-justify the content within table cells */
+    padding-right: 20px; /* adds spacing to the right of first column */
 }
 
 #beers {
