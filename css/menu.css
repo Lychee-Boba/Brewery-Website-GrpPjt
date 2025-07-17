@@ -16,6 +16,16 @@ body {
     background-position: 0 0, 0 20px, 20px -20px, -20px 0;
 }
 
+footer {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
 /* hide scrollbar */
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari */

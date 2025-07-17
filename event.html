@@ -7,9 +7,6 @@
     <!-- CSS Stylesheet-->
     <link rel="stylesheet" href="css/event.css">
 
-    <!--JavaScript-->
-    <script src="js/event.js"></script>
-
     <!--Imported Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -146,26 +143,70 @@
       </div>
         <br />
       <hr />
-      <h2>Featured Events</h2>
-      <div class="event-row">
-        <img src="images/cornhole.png" alt="Event Image" class="event-image" />
-        <div class="vertical-divider"></div>
-        <div class="event-details">
-          <div class="event-header">
-            <span class="event-name">Event Name</span>
-            <span class="event-cost">Cost/Pricing</span>
+
+      <div class="reservationContainer">
+        <section class="formSection">
+          <h2>Make a Reservation</h2>
+          <!--Used javascript form validation instead!-->
+          <form id="reservationForm" novalidate>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="e.g. Jane Doe">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="e.g. beerlover@gmail.com" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" pattern="\\d{10}" placeholder="0-000-000-000"required>
+
+            <label for="guests">Guests:</label>
+            <input type="number" id="guests" max="10" min="1" placeholder="1" required>
+
+            <!--Dropdown of events-->
+            <label for="event">Event:</label>
+            <select name="event" id="event">
+              <option value="none">----</option>
+              <option value="board-game">Board Game Night (7/1)</option>
+              <option value="trivia">Trivia Tuesday (7/2)</option>
+              <option value="open-mic">Open Mic Night (7/3)</option>
+              <option value="paint-sip">Paint & Sip (7/6)</option>
+              <option value="cornhole">Cornhole Tournament (7/7)</option>
+              <option value="board-game-two">Board Game Night (7/8)</option>
+              <option value="trivia-two">Trivia Tuesday (7/9)</option>
+              <option value="paint-games">Paint & Games (7/14)</option>
+            </select>
+
+            <!--should only be able to pick within the month of July-->
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date max="2025-07-01" min="2025-07-31" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" placeholder="Personal message or questions..." required></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+
+        <section class="eventSection">
+          <h2>Featured Events</h2>
+          <div class="event-row">
+            <img class="event-image" src="images/events/cornhole.png" alt="cornhole photo">
+            <div class="vertical-divider"></div>
+            <div class="event-details">
+              <div class="event-header">
+                <span class="event-name">Cornhole Tournament</span>
+                <span class="event-cost">$5 Entry Fee</span>
+              </div>
+            <p>competitive event where players or teams compete in the game of cornhole</p>
+            <button class="book-now">Book Now</button>
           </div>
-          <div class="event-time">Time</div>
-          <div class="event-location">Location</div>
-          <div class="event-description">
-            Description.
-          </div>
-          <button class="book-now">Book Now</button>
-        </div>
+      </div>
+          
+        </section>
       </div>
     </main>
     <footer>
-        
+        © 2025 Group 7 Brewing. All rights reserved.
     </footer>
+<!--JavaScript-->
+<script src="js/event.js"></script>
 </body>
 </html>
