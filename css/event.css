@@ -29,12 +29,15 @@ header {
 }
 
 #title {
-  font-family: "Pacifico", cursive;
-  font-size: 35px;
-  letter-spacing: 4px;
-  font-weight: bold;
-  color: white;
-  line-height: 1;
+    font-family: "Pacifico", cursive;
+    font-size: 35px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+    text-align: left;
+    margin-right: auto;
+    padding-left: 15px;
 }
 
 .navBar {

@@ -32,6 +32,9 @@ header {
     font-weight: bold;
     color: white;
     line-height: 1;
+    text-align: left;
+    margin-right: auto;
+    padding-left: 15px;
 }
 
 .navBar {
