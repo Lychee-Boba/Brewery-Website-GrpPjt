@@ -94,7 +94,7 @@ button#proceedBtn:hover {
 
 .error-msg {
   color: #e55353;
-  margin-top: 10px;
+  margin: auto;
   font-size: 0.98em;
   min-height: 18px;
 }
