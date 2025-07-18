@@ -1,5 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     displayCartItems();
+
+    // Prevent checkout if cart is empty
+    const checkoutBtn = document.getElementById('checkout-btn');
+    if (checkoutBtn) {
+        checkoutBtn.addEventListener('click', function(e) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (cart.length === 0) {
+                alert('Your cart is empty. Please add items before checking out.');
+            } else {
+                window.location.href = 'checkout.html';
+            }
+        });
+    }
     
     
     function displayCartItems() {
