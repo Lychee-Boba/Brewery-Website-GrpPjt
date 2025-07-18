@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+  <div class="checkout-container">
+    <div class="checkout-summary">
+      <div class="summary-total">
+        <strong>Total</strong>
+        <span></span>
+      </div>
+    </div>
+  </div>
+    <form id="checkoutForm">
+  <h3>Credit Card Details</h3>
+  <div class="input-row">
+    <label>
+      Card Holder
+      <input 
+        type="text" 
+        id="cardHolder" 
+        placeholder="Card Holder" 
+        required
+        pattern="^[a-zA-Z\s]+$"
+        title="Use letters and spaces only">
+    </label>
+    <label>
+      Expiration Date
+      <div class="exp-date">
+        <input 
+          type="text" 
+          id="expMonth" 
+          placeholder="MM" 
+          maxlength="2" 
+          required
+          pattern="^(0[1-9]|1[0-2])$"
+          title="Enter a valid month (01-12)">
+        <span>/</span>
+        <input 
+          type="text" 
+          id="expYear" 
+          placeholder="YY" 
+          maxlength="2" 
+          required
+          pattern="^\d{2}$"
+          title="Enter two-digit year">
+      </div>
+    </label>
+  </div>
+  <div class="input-row">
+    <label>
+      Card Number
+      <input 
+        type="text" 
+        id="cardNumber" 
+        placeholder="Card Number" 
+        maxlength="16"
+        minlength="15"
+        required
+        pattern="^\d{15,16}$"
+        title="Card number must be 15 or 16 digits">
+    </label>
+    <label>
+      CVC
+      <input 
+        type="text" 
+        id="cardCVC" 
+        placeholder="CVC" 
+        maxlength="4" 
+        required
+        pattern="^\d{3,4}$"
+        title="CVC must be 3 or 4 digits">
+    </label>
+  </div>
+  <button type="submit" id="proceedBtn">Proceed</button>
+</form>
+<div class="error-msg" id="errorMsg"></div>
+
+<div class="transaction-success" id="transactionSuccess" >
+  <h3>Transaction Complete!</h3>
+  <button onclick="window.location.href='index.html'">Return to Home Page</button>
+</div>
+</body>
+<script src="js/checkout.js"></script>
+</html>
