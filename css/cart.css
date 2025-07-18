@@ -153,29 +153,33 @@ footer {
 /*Cart Styling*/
 
 .table-section {
-  
   max-width: 900px;
   margin: 0 auto;
-  padding: 32px 16px;
+  padding: 24px 24px 64px 24px;
+  background: #fff;
 
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 24px;
-}
-
-th, td {
-  padding: 16px 8px;
-  text-align: left;
+  margin-bottom: 32px;
 }
 
 th {
-  color: #000;
-  font-size: 12px;
-  letter-spacing: 1px;
-  font-weight: 600;
+    text-align: left;
+    font-size: 13px;
+    color: #888b9b;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding-bottom: 16px;
+}
+
+td {
+    padding: 18px 8px;
+    vertical-align: middle;
+    border-top: 1px solid #F3F3F3;
+    font-size: 17px;
 }
 
 .special-instructions {
@@ -226,4 +230,3 @@ th {
 #checkout-btn:hover {
   background: #d65a31;
 }
-
