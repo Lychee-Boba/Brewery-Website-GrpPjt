@@ -1,0 +1,118 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fafafa;
+}
+
+.checkout-container {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 430px;
+  margin: 32px auto;
+  padding: 0;
+  border: 1px solid #eef;
+}
+
+.checkout-summary {
+  background: #f6faff;
+  padding: 32px 24px 16px 24px;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 2px solid;
+}
+
+.summary-item,
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.summary-total {
+  border-top: 1px solid;
+  padding-top: 18px;
+  font-size: 1.1rem;
+}
+
+#checkoutForm {
+  padding: 24px;
+  max-width: 430px;
+  margin:auto;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+label {
+  width: 100%;
+  font-size: 15px;
+  color: #222;
+  margin-bottom: 6px;
+  margin-left: 10px;
+  display: block;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 10px 8px;
+  margin-top: 4px;
+  border: 1px solid #dce1ea;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border 0.2s;
+}
+
+input[type='text']:focus {
+  border: 1.5px solid #367cff;
+  outline: none;
+}
+
+.exp-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+button#proceedBtn {
+  width: 100%;
+  padding: 12px;
+  background-color: #167dff;
+  color: #fff;
+  font-size: 1.05em;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button#proceedBtn:hover {
+  background-color: #1065d4;
+}
+
+.error-msg {
+  color: #e55353;
+  margin-top: 10px;
+  font-size: 0.98em;
+  min-height: 18px;
+}
+
+.transaction-success {
+  display:none; 
+  text-align:center; 
+  margin-top:2em;
+}
+
+.transaction-success button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top:1em; 
+  padding:0.5em 1.5em; 
+  font-size:1em;
+}
