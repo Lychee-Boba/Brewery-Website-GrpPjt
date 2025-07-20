@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Group 7 Brewing</title>
 
     <!-- CSS Stylesheet-->
-    <link rel="stylesheet" href="css/event.css">
+    <link rel="stylesheet" href="css/event.css" />
 
     <!--Imported Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <!--Navigation Bar-->
-        <nav class="navBar">
-            <img id="logo" src="images/group7LogoWhiteTrans.png" alt="G7 logo" width="70" height="70">
-            <h1 id="title">Group 7 Brewing</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-            <div class="navLinks">
-                <a class="navItem" id="homeLink" href="index.html">Home</a>
-                <a class="navItem" id="menuLink" href="menu.html">Menu</a>
-                <a class="navItem" id="eventLink" href="event.html">Events</a>
-                <a class="navItem" id="cartLink" href="cart.html">
-                    <img src="images/shoppingCart.png" alt="cartImg" id="cartPic"/>
-                </a>
-            </div>
-        </nav>
+  <body>
+    <header>
+      <!--Navigation Bar-->
+      <nav class="navBar">
+        <img
+          id="logo"
+          src="images/group7LogoWhiteTrans.png"
+          alt="G7 logo"
+          width="70"
+          height="70"
+        />
+        <h1 id="title">Group 7 Brewing</h1>
+
+        <div class="navLinks">
+          <a class="navItem" id="homeLink" href="index.html">Home</a>
+          <a class="navItem" id="menuLink" href="menu.html">Menu</a>
+          <a class="navItem" id="eventLink" href="event.html">Events</a>
+          <a class="navItem" id="cartLink" href="cart.html">
+            <img src="images/shoppingCart.png" alt="cartImg" id="cartPic" />
+          </a>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section id="banner" class="section">
-            <img src="images/eventBanner.jpg" alt="Brewery" class="bgImage"/>
-            <div class="overlayTagline">Events</div>
-        </section>
+      <section id="banner" class="section">
+        <img src="images/eventBanner.jpg" alt="Brewery" class="bgImage" />
+        <div class="overlayTagline">Events</div>
+      </section>
 
-       <div class="calendar-container">
+      <div class="calendar-container">
         <div class="calendar-header">
           <button>&lt;</button>
           <span>July 2025</span>
@@ -59,17 +69,17 @@
               <td>
                 <div class="calendar-date">1</div>
                 <div class="calendar-event-time">6:00 pm – 9:00 pm</div>
-                <div class="calendar-event">Board Game Night</div>
+                <a href="#july1" class="calendar-event">Board Game Night</a>
               </td>
               <td>
                 <div class="calendar-date">2</div>
                 <div class="calendar-event-time">7:00 pm – 9:00 pm</div>
-                <div class="calendar-event">Trivia Tuesday</div>
+                <a href="#july2" class="calendar-event">Trivia Tuesday</a>
               </td>
               <td>
                 <div class="calendar-date">3</div>
                 <div class="calendar-event-time">6:00 pm – 10:00 pm</div>
-                <div class="calendar-event">Open Mic Night</div>
+                <a href="#july3" class="calendar-event">Open Mic Night</a>
               </td>
               <td>
                 <div class="calendar-date">4</div>
@@ -77,89 +87,322 @@
               <td>
                 <div class="calendar-date">5</div>
                 <div class="calendar-event-time">5:00 pm – 9:00 pm</div>
-                <div class="calendar-event">Food Truck : Taco Town</div>
+                <a href="#july5" class="calendar-event"
+                  >Food Truck : Taco Town</a
+                >
                 <div class="calendar-event-time">7:00 pm – 10:00 pm</div>
-                <div class="calendar-event">Live Music: The Arctic Monkeys</div>
+                <a href="#july5" class="calendar-event"
+                  >Live Music: The Arctic Monkeys</a
+                >
               </td>
               <td>
                 <div class="calendar-date">6</div>
                 <div class="calendar-event-time">2:00 pm – 5:00 pm</div>
-                <div class="calendar-event">Paint & Sip</div>
-                
+                <a href="#july6" class="calendar-event">Paint & Sip</a>
               </td>
               <td>
                 <div class="calendar-date">7</div>
                 <div class="calendar-event-time">12:00 pm – 4:00 pm</div>
-                <div class="calendar-event">
-                  Cornhole Tournament
-                </div>
+                <a href="#july7" class="calendar-event">Cornhole Tournament</a>
               </td>
             </tr>
             <tr>
               <td>
                 <div class="calendar-date">8</div>
                 <div class="calendar-event-time">6:00 pm – 9:00 pm</div>
-                <div class="calendar-event">Board Game Night</div>
+                <a href="#july8" class="calendar-event">Board Game Night</a>
               </td>
               <td>
                 <div class="calendar-date">9</div>
                 <div class="calendar-event-time">7:00 pm – 9:00 pm</div>
-                <div class="calendar-event">Trivia Tuesday</div>
+                <a href="#july9" class="calendar-event">Trivia Tuesday</a>
               </td>
               <td>
                 <div class="calendar-date">10</div>
                 <div class="calendar-event-time">6:30 pm – 9:30 pm</div>
-                <div class="calendar-event">
-                  Brewer's Alley: Homebrew Club Meetup
-                </div>
+                <a href="#july10" class="calendar-event"
+                  >Brewer's Alley: Homebrew Club</a
+                >
               </td>
               <td>
                 <div class="calendar-date">11</div>
-                
               </td>
               <td>
                 <div class="calendar-date">12</div>
                 <div class="calendar-event-time">5:00 pm – 9:00 pm</div>
-                <div class="calendar-event">Food Truck Friday: Burger Bus</div>
+                <a href="#july12" class="calendar-event"
+                  >Food Truck Friday: Burger Bus</a
+                >
                 <div class="calendar-event-time">8:00 pm – 10:00 pm</div>
-                <div class="calendar-event">Live Music: Coldplay</div>
+                <a href="#july12" class="calendar-event"
+                  >Live Music: Coldplay Tribute</a
+                >
               </td>
               <td>
                 <div class="calendar-date">13</div>
-                <div class="calendar-event">Cumming Farmers Market</div>
                 <div class="calendar-event-time">7:00 pm – 10:00 pm</div>
-                <div class="calendar-event">Live Music: Michael Jackson</div>
+                <a href="#july13" class="calendar-event"
+                  >Michael Jackson Tribute Night</a
+                >
               </td>
               <td>
                 <div class="calendar-date">14</div>
                 <div class="calendar-event-time">12:00 pm – 4:00 pm</div>
-                <div class="calendar-event">
-                  Painting & Games
-                </div>
+                <a href="#july14" class="calendar-event">Painting & Games</a>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-        <br />
+      <br />
       <hr />
 
+      <section class="eventSection">
+        <div class="container">
+          <div class="featured-title">FEATURED EVENTS</div>
+
+          <!-- Board Game Night (7/1) -->
+          <div class="events-grid" id="july1">
+            <div class="event-poster">
+              <img src="images/events/game_night.png" alt="Board Game Night" />
+            </div>
+            <div class="event-details">
+              <div class="event-title">BOARD GAME NIGHT</div>
+              <div class="event-meta">
+                <span class="date">🗓️ July 1, 2025</span>
+                <span>⏰ 6:00 pm – 9:00 pm</span>
+              </div>
+              <div class="event-description">
+                <b>Bring your friends!</b> We provide over 50 board games from
+                classics to modern favorites. Enjoy craft beers and friendly
+                competition in our taproom. No experience needed - our game
+                masters will teach you the rules!
+              </div>
+            </div>
+          </div>
+
+          <!-- Trivia Tuesday (7/2) -->
+          <div class="events-grid" id="july2">
+            <div class="event-poster">
+              <img src="images/events/trivia.jpg" alt="Trivia Night" />
+            </div>
+            <div class="event-details">
+              <div class="event-title">TRIVIA TUESDAY</div>
+              <div class="event-meta">
+                <span class="date">🗓️ July 2, 2025</span>
+                <span>⏰ 7:00 pm – 9:00 pm</span>
+              </div>
+              <div class="event-description">
+                <b>Test your knowledge!</b> Weekly pub trivia with categories
+                ranging from pop culture to craft beer history. Teams of up to 6
+                people compete for brewery gift cards and bragging rights. This
+                week's theme: "90s Nostalgia".
+              </div>
+            </div>
+          </div>
+
+          <!-- Open Mic Night (7/3) -->
+          <div class="events-grid" id="july3">
+            <div class="event-poster">
+              <img src="images/events/open_mic.jpg" alt="Open Mic Night" />
+            </div>
+            <div class="event-details">
+              <div class="event-title">OPEN MIC NIGHT</div>
+              <div class="event-meta">
+                <span class="date">🗓️ July 3, 2025</span>
+                <span>⏰ 6:00 pm – 10:00 pm</span>
+              </div>
+              <div class="event-description">
+                <b>Showcase your talent!</b> Musicians, comedians, and poets
+                welcome. Sign-ups start at 5:30pm. Enjoy our special "Open Mic
+                IPA" brewed just for this event.
+              </div>
+            </div>
+          </div>
+
+          <!-- Food Truck + Arctic Monkeys (7/5) -->
+          <div class="events-grid" id="july5">
+            <div class="event-poster">
+              <img src="images/events/am.webp" alt="Live Music" />
+            </div>
+            <div class="event-details">
+              <div class="event-title">TACO TOWN & THE ARCTIC MONKEYS</div>
+              <div class="event-meta">
+                <span class="date">🗓️ July 5, 2025</span>
+                <span>⏰ 5:00 pm – 10:00 pm</span>
+                <span>🎫$15 </span>
+              </div>
+              <div class="event-description">
+                <b>Double feature Saturday!</b> Taco Town food truck serves from
+                5-9pm. Then enjoy an intimate performance by The Arctic Monkeys
+                at 7pm. Limited seating - arrive early! Special "AM Brew" ale
+                available only this night.
+              </div>
+            </div>
+          </div>
+
+          <!-- Paint & Sip (7/6) -->
+          <div class="events-grid" id="july6">
+            <div class="event-poster">
+              <img src="images/events/paint_sip.jpg" alt="Paint and Sip" />
+            </div>
+            <div class="event-details">
+              <div class="event-title">PAINT & SIP</div>
+              <div class="event-meta">
+                <span class="date">🗓️ July 6, 2025</span>
+                <span>⏰ 2:00 pm – 5:00 pm</span>
+                <span>🎫$10</span>
+              </div>
+              <div class="event-description">
+                <b>Create brewery-inspired art!</b> Local artist guides you
+                through painting while you enjoy our beers. All materials
+                included. This month's theme: "Hoppy Landscapes". Ticket
+                includes one craft beer and all painting supplies.
+              </div>
+            </div>
+          </div>
+
+          <!-- Cornhole Tournament (7/7) -->
+          <div class="events-grid" id="july7">
+            <div class="event-poster">
+              <img src="images/events/cornhole.png" alt="Cornhole Tournament" />
+            </div>
+            <div class="event-details">
+              <div class="event-title">CORNHOLE TOURNAMENT</div>
+              <div class="event-meta">
+                <span class="date">🗓️ July 7, 2025</span>
+                <span>⏰ 12:00 pm – 4:00 pm</span>
+              </div>
+              <div class="event-description">
+                <b>Sunday Funday!</b> Double-elimination cornhole tournament
+                with cash prizes. Teams of 2. Register by 11:30am. Enjoy our
+                "Sunday Session IPA" and barbecue specials during the games.
+                Winners get brewery merch and $100 cash prize.
+              </div>
+            </div>
+          </div>
+
+          <!-- Brewer's Alley (7/10) -->
+          <div class="events-grid" id="july10">
+            <div class="event-poster">
+              <img src="images/events/homebrew.jpg" alt="Homebrew Club" />
+            </div>
+            <div class="event-details">
+              <div class="event-title">BREWER'S ALLEY: HOMEBREW CLUB</div>
+              <div class="event-meta">
+                <span class="date">🗓️ July 10, 2025</span>
+                <span>⏰ 6:30 pm – 9:30 pm</span>
+              </div>
+              <div class="event-description">
+                <b>For beer enthusiasts!</b> Monthly meetup where homebrewers
+                share creations and techniques. This month's focus: "Summer
+                Wheat Beers". Bring your homebrew to share or just come to
+                learn. Our head brewer will demo small-batch techniques.
+              </div>
+            </div>
+          </div>
+
+          <!-- Food Truck + Coldplay (7/12) -->
+          <div class="events-grid" id="july12">
+            <div class="event-poster">
+              <img src="images/events/coldplay.jpg" alt="Coldplay Cover Band" />
+            </div>
+            <div class="event-details">
+              <div class="event-title">BURGER BUS & COLDPLAY TRIBUTE</div>
+              <div class="event-meta">
+                <span class="date">🗓️ July 12, 2025</span>
+                <span>⏰ 5:00 pm – 10:00 pm</span>
+                <span>🎫$20</span>
+              </div>
+              <div class="event-description">
+                <b>Friday night special!</b> Burger Bus serves gourmet burgers
+                5-9pm. At 8pm, enjoy "Coldplace" - the premier Coldplay tribute
+                band performing their greatest hits. Limited edition "Yellow"
+                wheat beer available only this night.
+              </div>
+            </div>
+          </div>
+
+          <!-- Michael Jackson (7/13) -->
+          <div class="events-grid" id="july13">
+            <div class="event-poster">
+              <img src="images/events/mj.jpg" alt="Michael Jackson Tribute" />
+            </div>
+            <div class="event-details">
+              <div class="event-title">MICHAEL JACKSON TRIBUTE NIGHT</div>
+              <div class="event-meta">
+                <span class="date">🗓️ July 13, 2025</span>
+                <span>⏰ 7:00 pm – 10:00 pm</span>
+              </div>
+              <div class="event-description">
+                <b>Moonwalk into the weekend!</b> "MJ Live" tribute artist
+                performs all the King of Pop's hits. Dance floor opens at 8pm.
+                Special "Thriller" stout and "Beat It" blonde ale available.
+                Costume contest with brewery prizes!
+              </div>
+            </div>
+          </div>
+
+          <!-- Painting & Games (7/14) -->
+          <div class="events-grid" id="july14">
+            <div class="event-poster">
+              <img
+                src="images/events/game_paint.png"
+                alt="Painting and Games"
+              />
+            </div>
+            <div class="event-details">
+              <div class="event-title">PAINTING & GAMES</div>
+              <div class="event-meta">
+                <span class="date">🗓️ July 14, 2025</span>
+                <span>⏰ 12:00 pm – 4:00 pm</span>
+                <span>🎫$10</span>
+              </div>
+              <div class="event-description">
+                <b>Creative Sunday!</b> Drop-in painting session with board
+                games available. No instruction - just relax with brushes,
+                beers, and games. All materials provided. This week's paint
+                inspiration: "Abstract Hops". Play our giant Jenga tournament at
+                2pm.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div class="reservationContainer">
         <section class="formSection">
           <h2>Make a Reservation</h2>
           <!--Used javascript form validation instead!-->
           <form id="reservationForm" novalidate>
             <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="e.g. Jane Doe">
+            <input type="text" id="name" placeholder="e.g. Jane Doe" />
 
             <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="e.g. beerlover@gmail.com" required>
+            <input
+              type="email"
+              id="email"
+              placeholder="e.g. beerlover@gmail.com"
+              required
+            />
 
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" pattern="\\d{10}" placeholder="0-000-000-000"required>
+            <input
+              type="tel"
+              id="phone"
+              pattern="\\d{10}"
+              placeholder="0-000-000-000"
+              required
+            />
 
             <label for="guests">Guests:</label>
-            <input type="number" id="guests" max="10" min="1" placeholder="1" required>
+            <input
+              type="number"
+              id="guests"
+              max="10"
+              min="1"
+              placeholder="1"
+              required
+            />
 
             <!--Dropdown of events-->
             <label for="event">Event:</label>
@@ -177,36 +420,23 @@
 
             <!--should only be able to pick within the month of July-->
             <label for="date">Date</label>
-            <input type="date" id="date" name="date max="2025-07-01" min="2025-07-31" required>
+            <input type="date" id="date" name="date max=" 2025-07-01"
+            min="2025-07-31" required>
 
             <label for="message">Message:</label>
-            <textarea id="message" rows="4" placeholder="Personal message or questions..." required></textarea>
+            <textarea
+              id="message"
+              rows="4"
+              placeholder="Personal message or questions..."
+              required
+            ></textarea>
             <button type="submit">Submit</button>
           </form>
         </section>
-
-        <section class="eventSection">
-          <h2>Featured Events</h2>
-          <div class="event-row">
-            <img class="event-image" src="images/events/cornhole.png" alt="cornhole photo">
-            <div class="vertical-divider"></div>
-            <div class="event-details">
-              <div class="event-header">
-                <span class="event-name">Cornhole Tournament</span>
-                <span class="event-cost">$5 Entry Fee</span>
-              </div>
-            <p>competitive event where players or teams compete in the game of cornhole</p>
-            <button class="book-now">Book Now</button>
-          </div>
-      </div>
-          
-        </section>
       </div>
     </main>
-    <footer>
-        © 2025 Group 7 Brewing. All rights reserved.
-    </footer>
-<!--JavaScript-->
-<script src="js/event.js"></script>
-</body>
+    <footer>© 2025 Group 7 Brewing. All rights reserved.</footer>
+    <!--JavaScript-->
+    <script src="js/event.js"></script>
+  </body>
 </html>
