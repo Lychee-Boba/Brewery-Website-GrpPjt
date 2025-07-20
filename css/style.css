@@ -229,22 +229,54 @@ p {
 
 #hours {
   text-align: center;
+  background-color: #f4f4f4;
 }
 
-/* Center the table horizontally */
+.page-info section{
+  margin: auto;
+  margin-bottom: 50px; 
+  max-width: 820px;
+  background: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 1px 2px 8px #c8c8c8;
+  padding: 2rem 1.5rem;
+}
 
-/* rotating beer and contact section */
+.page-info section p {
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
+
+
 table {
-    margin-left: auto;
-    margin-right: auto;
+  margin: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px #bbbbbb;
+  border: none;
+  font-size: 1rem;
 }
 
-table td {
-    text-align: left;  /* Left-justify the content within table cells */
-    padding-left: 30px; /* adds spacing to the right of first column */
+th, td {
+  padding: 6px 18px;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif
+}
+
+table caption {
     color: #31331f;
-    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    margin-bottom: 5px;
     font-size: 20px;
+}
+
+/* List styling */
+ul {
+  padding-left: 1.3em;
+}
+li {
+  margin-bottom: 0.5em;
 }
 
 .left {
@@ -411,7 +443,6 @@ table td {
     font-size: 1.1rem;
 }
 
-      
 .review-stars {
     color: #fbc02d; 
     font-size: 1.2rem;
@@ -492,4 +523,21 @@ footer {
     height: 100%;
     object-fit: cover;
     border-radius: 100px 0 0 100px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.contactUs {
+    margin-bottom: 50px;
 }
