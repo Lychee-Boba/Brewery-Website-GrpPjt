@@ -198,14 +198,13 @@ p {
 
 
 .grid-container { 
-   background: #b7c4b1;
-   display: grid;
-   grid-template-columns: 33% 34% 33%;
-   grid-template-rows: auto auto auto;
-   gap: 10px;
-   height: auto;
-   padding: 1rem;
-   box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 2rem;
+    background: #b7c4b1;
+    box-sizing: border-box;
+    align-items: start;
 }
 
 .grid-container div {
@@ -214,39 +213,82 @@ p {
    overflow-wrap: break-word;
 }
 
-.grid-container h2 {
-   font-family: Arial, sans-serif;
-   font-size: 14pt;
-   text-align: center;
-   margin-bottom: 1rem;
-}
-
-.grid-container p {
-   font-family: Arial, sans-serif;
-   font-size: 14pt;
-   text-align: left;
-}
-
 #hours {
   text-align: center;
   background-color: #f4f4f4;
 }
 
-.page-info section{
-  margin: auto;
-  margin-bottom: 50px; 
-  max-width: 820px;
-  background: #f4f4f4;
-  border-radius: 12px;
-  box-shadow: 1px 2px 8px #c8c8c8;
-  padding: 2rem 1.5rem;
+.info-section h2 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #31331f;
+  text-decoration: underline;
+  margin-bottom: 1rem;
 }
 
-.page-info section p {
-  margin-bottom: 10px;
+.info-section p,
+.info-section ul {
   font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
   color: black;
+  margin-bottom: 1rem;
 }
+
+ul {
+  padding-left: 1.3em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+.info-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px;
+    position: relative;
+}
+
+#events-info {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 1px 2px 8px #6a6a6a;
+    padding: 2rem;
+    justify-self: start;
+    grid-column: span 2;
+    margin-right: auto;
+    margin-left: -150px;
+    width: 80%;
+}
+
+#food{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 1px 2px 8px #6a6a6a;
+    padding: 2rem;
+    justify-self: end;
+    width: 95%;
+    grid-column: span 2;
+    margin-left: auto;
+    width: 80%;
+}
+
+.btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #31331f;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 
 
 table {
@@ -307,13 +349,6 @@ li {
 .visitUs p {
     text-align: center;
     line-height: 1.8;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    padding: 40px;
 }
 
 .center {
