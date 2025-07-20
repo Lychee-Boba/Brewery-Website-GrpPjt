@@ -399,3 +399,29 @@ footer {
   flex: 1;
   overflow-y: auto;
 }
+
+/* Reservation Button*/
+.scrollButton {
+  display: inline-block;
+  background-color: #31331f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+.scrollButton:hover {
+  background-color: #45472b;
+}
+
+
+.buttonWrapper {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
