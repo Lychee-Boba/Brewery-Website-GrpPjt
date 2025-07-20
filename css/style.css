@@ -145,6 +145,7 @@ main {
 /*review stream on home page*/
 p {
     font-family: Arial, sans-serif;
+    text-align: left;
     color:#31331f;
 
 }
@@ -231,19 +232,77 @@ p {
 }
 
 /* Center the table horizontally */
+
+/* rotating beer and contact section */
 table {
     margin-left: auto;
     margin-right: auto;
 }
 
-table th,
 table td {
     text-align: left;  /* Left-justify the content within table cells */
-    padding-right: 20px; /* adds spacing to the right of first column */
+    padding-left: 30px; /* adds spacing to the right of first column */
+    color: #31331f;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left table {
+    width: 100%;
+    margin-bottom: 30px;
+    max-width: 300px;
+}
+
+.left h2 {
+    color: #31331f;
+    text-decoration: underline;
+    margin-top: 30px;
+}
+
+.left p {
+    color: #31331f;
+}
+
+.visitUs h2 {
+    color: #31331f;
+}
+.visitUs p {
+    text-align: center;
+    line-height: 1.8;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+}
+
+.center {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 180px;
+    width: 90%;
 }
 
 #beers {
   text-align: center;
+  aspect-ratio: 16 / 9;
+  max-width: 500px;
+  width: 90%;
+  height: 500px;
+  position: relative;
+  justify-self: end;
 }
 
 #beers img {
@@ -251,12 +310,22 @@ table td {
   margin: 0 auto;
 }
 
+#beers h2 {
+    font-weight: bold;
+    margin: 15px;
+    text-decoration: underline;
+    color: #31331f;
+    font-size: 30px;
+    font-family: "Barriecito", system-ui;
+}
+
 .rotating-image {
-    max-width: 80%;
-    max-height: 60%;
-    opacity: 1;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
     transition: opacity 1s ease-in-out;
-    position: relative;
 }
 
 .fade-out {
