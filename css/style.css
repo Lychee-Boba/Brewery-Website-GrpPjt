@@ -14,6 +14,7 @@ body {
     background-color: #f4f4f4; /* soft green background #a8d5ba*/
     background-size: 40px 40px;
     background-position: 0 0, 0 20px, 20px -20px, -20px 0;
+    position: relative;
 }
 
 /* hide scrollbar */
@@ -95,6 +96,69 @@ h1 {
 
 main {
     margin-top: 80px;
+}
+
+/* page overlay section */
+.overlays {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* makes sure u can still click */
+    z-index: 5;
+}
+
+.overlays div {
+    position: absolute;
+}
+
+.mint-leaf {
+    top: 900px;
+    left: -250px;
+    width: 180px;
+    transform: rotate(20deg);
+}
+
+.mint-leaf img {
+    width: 600px;
+    height: auto;
+    filter: drop-shadow(3px 6px 8px rgba(0, 0, 0, 0.4));
+}
+
+.glass {
+    top: 1350px;
+    right: 100px;
+    width: 200px;
+}
+
+.glass img {
+    width: 350px;
+    height: auto;
+    filter: drop-shadow(3px 6px 8px rgba(0, 0, 0, 0.4));
+}
+
+.foam {
+    top: 680px;
+    right: -10px;
+    transform: rotate(90deg);
+}
+
+.foam img {
+    width: 500px;
+    height: auto;
+}
+
+.lime {
+    top: 1800px;
+    right: 100px;
+    width: 200px;
+}
+
+.lime img {
+    width: 200px;
+    height: auto;
+    filter: drop-shadow(3px 6px 8px rgba(0, 0, 0, 0.4));
 }
 
 /* banner section */
